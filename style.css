@@ -4,6 +4,14 @@
     box-sizing: border-box;
 }
 
+img{
+    width: 100%;
+}
+
+/*
+font-family: 'Overpass', sans-serif; fw: 300, 600
+font-family: 'Ubuntu', sans-serif; fw: 400 500 700
+*/
 :root{
     /*Primary*/
     --light-red-CTA-text : hsl(356, 100%, 66%);
@@ -13,6 +21,7 @@
     /*Neutral*/
     --white-text: hsl(0, 0%, 100%);
     --grayish-blue-footer-text: hsl(240, 2%, 79%);
+    --background-list-nav: rgba(200, 200, 203, 0.4);
     --very-dark-grayish-blue-body-copy: hsl(207, 13%, 34%);
     --very-dark-black-blue-footer-background: hsl(240, 10%, 16%);
 
@@ -24,3 +33,244 @@
     --very-dark-gray-blue: hsl(237, 17%, 21%);
     --very-dark-desaturated-blue: hsl(237, 23%, 32%);
 }
+
+body{
+    background: url('./images/bg-pattern-intro.svg');
+    font-family: 'Overpass', sans-serif;
+}
+
+/*Header Styles Start*/
+#main_header_index{
+    background: url('images/bg-pattern-intro.svg') no-repeat, linear-gradient(155deg, var(--very-light-red-intro) 30%, var(--light-red-CTA-mobile-nav));
+    background-size: 420%;
+    background-position: -500px;
+    height: 100vh;
+    border-bottom-left-radius: 6rem;
+}
+
+
+#btn_burger_menu {
+    background: transparent;
+    border: none;
+    outline: none;
+    width: 15%;
+}
+
+.logo {
+    width: auto;
+    height: 100%;
+}
+
+.logo-burger-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bodymovinanim path {
+    stroke: #fff;
+}
+
+.btn-dropdown{
+    background: transparent;
+    border: none;
+    outline: none;
+    position: relative;
+    font-family: 'Overpass', sans-serif;
+    font-weight: 600;
+    font-size: 1.3rem;
+    color: var(--very-dark-blue-headings);
+}
+
+.btn-dropdown::after{
+    content: url('images/icon-arrow-dark.svg');
+    position: absolute;
+    right: -15px;
+    top: -2px;
+}
+
+#main_nav_bar{
+    background: var(--white-text);
+    width: 85%;
+    margin: auto;
+    border-radius: 10px;
+    font-family: 'Overpass', sans-serif;
+    font-weight: 600;
+    padding: 7%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    height: 40vh;
+}
+
+.inner-list-dropdown, .list-nav{
+    list-style: none;
+    text-align: center;
+}
+
+.nav-link{
+    text-decoration: none;
+    color: var(--very-dark-grayish-blue-body-copy);
+}
+
+.inner-list-dropdown {
+    width: 85%;
+    margin: auto;
+    background: var(--background-list-nav);
+    border-radius: 5px;
+    height: 0;
+}
+
+.inner-nav-item-product,
+.inner-nav-item-company,
+.inner-nav-item-connect{
+    opacity: 0;
+}
+
+.inner-nav-item{
+    font-size: 1.1rem;
+}
+
+.inner-nav-item:not(:last-child){
+    margin-bottom: 10px;
+}
+
+.list-item-nav {
+    margin-bottom: 20px;
+}
+
+.open-list-product{
+    animation: Anim-open-list-product 0.6s;
+    height: 24vh;
+    padding: 7%;
+}
+
+.close-list-product{
+    animation: Anim-close-list-product 0.6s;
+}
+
+.open-list-company{
+    animation: Anim-open-list-company 0.6s;
+    height: 20vh;
+    padding: 7%;
+}
+
+.close-list-company{
+    animation: Anim-close-list-company 0.6s;
+}
+
+.open-list-connect{
+    animation: Anim-open-list-connect 0.6s;
+    height: 16vh;
+    padding: 7%;
+}
+
+.close-list-connect{
+    animation: Anim-close-list-connect 0.6s;
+}
+
+.open-item{
+    animation: Anim-open-item 1.4s;
+    opacity: 1;
+}
+
+.close-item{
+    animation: Anim-close-item 0.2s;
+    opacity: 0;
+}
+
+/*animation dropdown product*/
+@keyframes Anim-open-list-product{
+    0%{
+        height: 0vh;
+        padding: 0;
+    }
+    100%{
+        height: 24vh;
+        padding: 7%;
+    }
+}
+
+@keyframes Anim-close-list-product{
+    0%{
+        height: 24vh;
+        padding: 7%;
+    }
+    100%{
+        height: 0;
+        padding: 0;
+    }
+}
+/*animation dropdown product*/
+
+
+/*animation dropdown company*/
+@keyframes Anim-open-list-company{
+    0%{
+        height: 0vh;
+        padding: 0;
+    }
+    100%{
+        height: 20vh;
+        padding: 7%;
+    }
+}
+
+@keyframes Anim-close-list-company{
+    0%{
+        height: 20vh;
+        padding: 7%;
+    }
+    100%{
+        height: 0;
+        padding: 0;
+    }
+}
+/*animation dropdown company*/
+
+
+/*animation dropdown connect*/
+@keyframes Anim-open-list-connect{
+    0%{
+        height: 0vh;
+        padding: 0;
+    }
+    100%{
+        height: 16vh;
+        padding: 7%;
+    }
+}
+
+@keyframes Anim-close-list-connect{
+    0%{
+        height: 16vh;
+        padding: 7%;
+    }
+    100%{
+        height: 0;
+        padding: 0;
+    }
+}
+/*animation dropdown connect*/
+
+@keyframes Anim-open-item{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes Anim-close-item{
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+/*Header Styles End*/
