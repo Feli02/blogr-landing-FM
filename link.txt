@@ -1,1 +1,6 @@
 https://blogr-landing-page-eight.vercel.app/
+
+
+Hacer que cuando se cierre el burger menu se cierren todos los dropdowns
+
+nav --> visibility: hidden
