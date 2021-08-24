@@ -21,10 +21,13 @@ btn_product.addEventListener('click', () => {
         list_product.classList.add('close-list-product')
         list_product.classList.remove('open-list-product')
 
+        //toggle classes
         for(i=0; i < items_product.length; i++){
             items_product[i].classList.remove('open-item')
             items_product[i].classList.add('close-item')
         }
+
+        btn_product.classList.remove('btn-open-color-change')
     }else{
         //Open product dropdown
         list_product.classList.add('open-list-product')
@@ -35,6 +38,8 @@ btn_product.addEventListener('click', () => {
             items_product[i].classList.remove('close-item')
         }
 
+        btn_product.classList.add('btn-open-color-change')
+
         //Close connect dropdown if open
         if(list_connect.classList.contains('open-list-connect')){
             list_connect.classList.add('close-list-connect')
@@ -44,7 +49,9 @@ btn_product.addEventListener('click', () => {
                 items_connect[i].classList.remove('open-item')
                 items_connect[i].classList.add('close-item')
             }
+            btn_connect.classList.remove('btn-open-color-change')
         }
+        
 
        //Close company dropdown if open
        if(list_company.classList.contains('open-list-company')){
@@ -55,6 +62,7 @@ btn_product.addEventListener('click', () => {
                 items_company[i].classList.remove('open-item')
                 items_company[i].classList.add('close-item')
             }
+            btn_company.classList.remove('btn-open-color-change')
        }
     }
 })
@@ -83,6 +91,7 @@ btn_company.addEventListener('click', () => {
             items_company[i].classList.remove('open-item')
             items_company[i].classList.add('close-item')
         }
+        btn_company.classList.remove('btn-open-color-change')
 
     }else{
         //Open company dropdown
@@ -93,6 +102,7 @@ btn_company.addEventListener('click', () => {
             items_company[i].classList.add('open-item')
             items_company[i].classList.remove('close-item')
         }
+        btn_company.classList.add('btn-open-color-change')
 
         //Close connect dropdown if open
         if(list_connect.classList.contains('open-list-connect')){
@@ -103,6 +113,7 @@ btn_company.addEventListener('click', () => {
                 items_connect[i].classList.remove('open-item')
                 items_connect[i].classList.add('close-item')
             }
+            btn_connect.classList.remove('btn-open-color-change')
         }
 
         //Close product dropdown if open
@@ -114,6 +125,7 @@ btn_company.addEventListener('click', () => {
                 items_product[i].classList.remove('open-item')
                 items_product[i].classList.add('close-item')
             }
+            btn_product.classList.remove('btn-open-color-change')
         }
     }
 })
@@ -139,6 +151,7 @@ btn_connect.addEventListener('click', () => {
             items_connect[i].classList.remove('open-item')
             items_connect[i].classList.add('close-item')
         }
+        btn_connect.classList.remove('btn-open-color-change')
     }else{
         //Open connect dropdown
         list_connect.classList.add('open-list-connect')
@@ -148,6 +161,7 @@ btn_connect.addEventListener('click', () => {
             items_connect[i].classList.add('open-item')
             items_connect[i].classList.remove('close-item')
         }
+        btn_connect.classList.add('btn-open-color-change')
 
         //Close company dropdown if open
         if(list_company.classList.contains('open-list-company')){
@@ -158,6 +172,7 @@ btn_connect.addEventListener('click', () => {
                 items_company[i].classList.remove('open-item')
                 items_company[i].classList.add('close-item')
             }
+            btn_company.classList.remove('btn-open-color-change')
         }
 
         //Close product dropdown if open
@@ -169,6 +184,7 @@ btn_connect.addEventListener('click', () => {
                 items_product[i].classList.remove('open-item')
                 items_product[i].classList.add('close-item')
             }
+            btn_product.classList.remove('btn-open-color-change')
         }
     }
 })

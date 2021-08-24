@@ -82,6 +82,10 @@ body{
     color: var(--very-dark-blue-headings);
 }
 
+.btn-open-color-change{
+    color: var(--very-dark-grayish-blue-body-copy);
+}
+
 .btn-dropdown::after{
     content: url('images/icon-arrow-dark.svg');
     position: absolute;
@@ -96,14 +100,18 @@ body{
     border-radius: 10px;
     font-family: 'Overpass', sans-serif;
     font-weight: 600;
-    padding: 7%;
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
     margin: auto;
-    height: 40vh;
+}
+
+.nav-burger-menu{
+    height: 0;
+    opacity: 0;
+    padding: 0;
 }
 
 .inner-list-dropdown, .list-nav{
@@ -135,16 +143,16 @@ body{
 }
 
 .inner-nav-item:not(:last-child){
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 .list-item-nav {
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 }
 
 .open-list-product{
     animation: Anim-open-list-product 0.6s;
-    height: 24vh;
+    height: 26vh;
     padding: 7%;
 }
 
@@ -154,7 +162,7 @@ body{
 
 .open-list-company{
     animation: Anim-open-list-company 0.6s;
-    height: 20vh;
+    height: 21vh;
     padding: 7%;
 }
 
@@ -164,7 +172,7 @@ body{
 
 .open-list-connect{
     animation: Anim-open-list-connect 0.6s;
-    height: 16vh;
+    height: 17vh;
     padding: 7%;
 }
 
@@ -189,14 +197,14 @@ body{
         padding: 0;
     }
     100%{
-        height: 24vh;
+        height: 26vh;
         padding: 7%;
     }
 }
 
 @keyframes Anim-close-list-product{
     0%{
-        height: 24vh;
+        height: 26vh;
         padding: 7%;
     }
     100%{
@@ -214,14 +222,14 @@ body{
         padding: 0;
     }
     100%{
-        height: 20vh;
+        height: 21vh;
         padding: 7%;
     }
 }
 
 @keyframes Anim-close-list-company{
     0%{
-        height: 20vh;
+        height: 21vh;
         padding: 7%;
     }
     100%{
@@ -239,14 +247,14 @@ body{
         padding: 0;
     }
     100%{
-        height: 16vh;
+        height: 17vh;
         padding: 7%;
     }
 }
 
 @keyframes Anim-close-list-connect{
     0%{
-        height: 16vh;
+        height: 17vh;
         padding: 7%;
     }
     100%{
@@ -266,6 +274,105 @@ body{
 }
 
 @keyframes Anim-close-item{
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+.btn-container-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btn-simple {
+    background: transparent;
+    border: none;
+    margin-bottom: 15px;
+    outline: none;
+    width: 50%;
+    height: 50%;
+}
+
+.btn-container-burger-menu {
+    padding: 10%;
+    padding-bottom: 0;
+    border-top: solid 1px var(--grayish-blue-footer-text);
+    height: 128px;
+}
+
+.links{
+    text-decoration: none;
+    font-family: 'Overpass', sans-serif;
+    font-weight: 600;
+    font-size: 1.3rem;
+}
+
+.link-login{
+    color: var(--very-dark-blue-headings);
+}
+
+.btn-fill{
+    border: none;
+    outline: none;
+    background: rgb(255,143,112);
+    background: linear-gradient(137deg, rgba(255,143,112,1) 23%, rgba(255,61,84,1) 79%);
+    padding: 8%;
+    width: 70%;
+    border-radius: 60px;
+}
+
+.link-sign-up{
+    color: var(--white-text);
+}
+
+.nav-burger-menu-open{
+    animation: burger-menu-Anim-in 1s, opacity-Anim-menu-in 1.4s;
+    opacity: 1;
+    padding: 7%;
+    min-height: 41vh;
+    height: fit-content;
+}
+
+.nav-burger-menu-close{
+    animation: burger-menu-Anim-out 1s, opacity-Anim-menu-out 0.4s;
+}
+
+@keyframes burger-menu-Anim-in{
+    0%{
+        height: 0;
+        padding: 0;
+    }
+    100%{
+        height: 41vh;
+        padding: 7%;
+    }
+}
+
+@keyframes burger-menu-Anim-out{
+    0%{
+        height: 41vh;
+        padding: 7%;
+    }
+    100%{
+        height: 0;
+        padding: 0;
+    }
+}
+
+@keyframes opacity-Anim-menu-in{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes opacity-Anim-menu-out{
     0%{
         opacity: 1;
     }

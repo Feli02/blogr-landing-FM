@@ -22,7 +22,7 @@
         <img class="logo" src="images/logo.svg" alt="logo-blogr">
         <button id="btn_burger_menu"><div class="bodymovinanim"></div></button>
       </div>
-      <nav id="main_nav_bar">
+      <nav id="main_nav_bar" class="nav-burger-menu">
         <ul class="list-nav">
           <li class="list-item-nav">
             <button class="btn-dropdown" id="btn_dropdown_product">Product</button>
@@ -52,17 +52,17 @@
             </ul>
           </li>
         </ul>
-        <div class="btn-container-header">
-          <button class="btn-simple"><a href="#">Login</a></button>
-          <button class="btn-fill"><a href="#">Sign Up</a></button>
+        <div class="btn-container-header btn-container-burger-menu">
+          <button class="btn-simple"><a class="link-login links" href="#">Login</a></button>
+          <button class="btn-fill"><a class="links link-sign-up" href="#">Sign Up</a></button>
         </div>
       </nav>
     </div>
     <h1 class="main-title">A modern publishing platform</h1>
     <p class="slogan">Grow your audience and build your online brand</p>
     <div class="btn-container-header">
-      <button class="btn-fill"><a href="#">Start for Free</a></button>
-      <button class="btn-outline"><a href="#">Learn More</a></button>
+      <button class="btn-fill"><a class="links" href="#">Start for Free</a></button>
+      <button class="btn-outline"><a class="links" href="#">Learn More</a></button>
     </div>
   </header>
 
@@ -186,5 +186,6 @@
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.5.3/lottie_svg.min.js"></script>
 <script src="js/lottie.js"></script>
+<script src="js/burgerMenu.js"></script>
 <script src="js/dropdown.js"></script>
 </html>
